@@ -1,0 +1,84 @@
+# SaaS Project Master Rules
+
+---
+
+Provide repo-level context to our AI assistant so it understands our architecture, coding style, and project-specific nuances.
+
+### Guidelines
+- **Project Context & Stack:**
+  - SaaS built with [Your Tech Stack Here] (e.g., Next.js, TypeScript, Node.js, Postgres, Tailwind CSS).
+  - Emphasize modular design, microservices, and RESTful APIs.
+- **Coding Style & Conventions:**
+  - Always use TypeScript with strict typing.
+  - Favor functional programming and immutability.
+  - Follow naming conventions: camelCase for functions/vars, PascalCase for components/types.
+- **AI Behavior:**
+  - Generate code that is clean, well-commented, and adheres to our style guide.
+  - Include architectural comments where decisions are nontrivial.
+  - Respond using a factual, expert tone; for example, “As per our architecture, …”.
+- **File & Directory Structure:**
+  - Code should follow our directory layout (e.g., `/apps`, `/components`, `/lib`).
+  - Always refer to configuration files (like `tsconfig.json` or `tailwind.config.js`) when relevant.
+- **Additional Instructions:**
+  - If uncertain, ask clarifying questions rather than guessing.
+  - Do not introduce features that deviate from our SaaS scope.
+
+*Example snippet for AI (in JSON format if needed):*
+```json
+{
+  "project": "SaaS Platform",
+  "stack": ["Next.js", "TypeScript", "Node.js", "Postgres", "Tailwind CSS"],
+  "guidelines": [
+    "Use strict typing and modern ES features.",
+    "Follow our modular architecture.",
+    "Ensure generated code is production-ready."
+  ],
+  "tone": "expert, factual, concise"
+}
+```
+
+---
+
+Define local workspace rules that Cascade uses to manage real-time context and interactions.
+
+### Guidelines
+- **Global Workspace Context:**
+  - All settings here apply only within this project’s workspace.
+  - Include project-specific data like API endpoints, authentication flows, and UI state.
+- **UI & Interaction Rules:**
+  - Enable real-time collaboration—ensure any changes update across all active sessions.
+  - Use hardware-accelerated animations sparingly to optimize performance.
+  - Respect user preferences for reduced motion.
+- **File Management:**
+  - Prevent accidental modifications: e.g., “Do not modify files in `/config` without explicit approval.”
+  - Automatically append local rules to the global AI settings when scanning the workspace.
+- **Conciseness & Clarity:**
+  - Keep each rule short, clear, and actionable.
+  - Group similar rules together using markdown lists or XML-like tags if needed.
+
+*Example Rules:*
+- Always confirm before altering system configuration files.
+- Ensure UI components update responsively and maintain a consistent design.
+- Check with the team before introducing changes that affect the authentication flow.
+
+---
+
+Maintain a high-quality, maintainable codebase by enforcing standards on code clarity, formatting, and architectural hygiene.
+
+### Guidelines
+- **Code Quality & Organization:**
+  - Use linters (e.g., ESLint, Stylelint) and formatters (e.g., Prettier) to enforce a consistent style.
+  - Structure code into reusable, independent modules.
+  - Refactor code regularly to eliminate technical debt.
+- **Documentation & Comments:**
+  - Document every new module and API endpoint.
+  - Use inline comments to explain nontrivial logic.
+  - Maintain updated README files in each module.
+- **Version Control & Testing:**
+  - Use Git best practices: clear commit messages, code reviews, and branch management.
+  - Implement automated testing (unit, integration, end-to-end) as part of the CI/CD pipeline.
+  - Ensure any changes are fully covered by tests before merging.
+- **Security & Performance:**
+  - Regularly audit dependencies for vulnerabilities.
+  - Optimize performance by profiling critical paths.
+  - Use environment variables for sensitive configurations.
